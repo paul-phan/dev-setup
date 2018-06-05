@@ -2,7 +2,7 @@ dev-setup
 ============
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/repo-header.gif">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/repo-header.gif">
 </p>
 
 ## Motivation
@@ -39,7 +39,7 @@ If you're interested in automation, `dev-setup` provides a customizable [setup s
 This repo takes a more **light-weight** approach to automation using a combination of **Homebrew, Homebrew Cask, and shell scripts** to do basic system setup.  It also provides **easy-to understand instructions** for installation, configuration, and usage for each developer app or tool.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/iterm2.png">
 </p>
 
 ### Sections Summary
@@ -155,13 +155,13 @@ This repo takes a more **light-weight** approach to automation using a combinati
 
 ##### Clone the Repo
 
-    $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup
+    $ git clone https://github.com/paul-phan/dev-setup.git && cd dev-setup
 
 ##### Run the .dots Script with Command Line Arguments
 
 **Since you probably don't want to install every section**, the `.dots` script supports command line arguments to run only specified sections.  Simply pass in the [scripts](#scripts) that you want to install.  Below are some examples.
 
-**For more customization, you can [clone](#clone-the-repo) or [fork](https://github.com/donnemartin/dev-setup/fork) the repo and tweak the `.dots` script and its associated components to suit your needs.**
+**For more customization, you can [clone](#clone-the-repo) or [fork](https://github.com/paul-phan/dev-setup/fork) the repo and tweak the `.dots` script and its associated components to suit your needs.**
 
 Run all:
 
@@ -177,29 +177,29 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`
 
 #### Running without Git
 
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots [Add ARGS Here]
+    $ curl -O https://raw.githubusercontent.com/paul-phan/dev-setup/master/.dots && ./.dots [Add ARGS Here]
 
 #### Scripts
 
-* [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots)
+* [.dots](https://github.com/paul-phan/dev-setup/blob/master/.dots)
     * Runs specified scripts
-* [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
+* [bootstrap.sh](https://github.com/paul-phan/dev-setup/blob/master/bootstrap.sh)
     * Syncs dev-setup to your local home directory `~`
-* [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
+* [osxprep.sh](https://github.com/paul-phan/dev-setup/blob/master/osxprep.sh)
     * Updates OS X and installs Xcode command line tools
-* [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
+* [brew.sh](https://github.com/paul-phan/dev-setup/blob/master/brew.sh)
     * Installs common Homebrew formulae and apps
-* [osx.sh](https://github.com/donnemartin/dev-setup/blob/master/osx.sh)
+* [osx.sh](https://github.com/paul-phan/dev-setup/blob/master/osx.sh)
     * Sets up OS X defaults geared towards developers
-* [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
+* [pydata.sh](https://github.com/paul-phan/dev-setup/blob/master/pydata.sh)
     * Sets up python for data analysis
-* [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
+* [aws.sh](https://github.com/paul-phan/dev-setup/blob/master/aws.sh)
     * Sets up Spark, Hadoop MapReduce, and Amazon Web Services
-* [datastores.sh](https://github.com/donnemartin/dev-setup/blob/master/datastores.sh)
+* [datastores.sh](https://github.com/paul-phan/dev-setup/blob/master/datastores.sh)
     * Sets up common data stores
-* [web.sh](https://github.com/donnemartin/dev-setup/blob/master/web.sh)
+* [web.sh](https://github.com/paul-phan/dev-setup/blob/master/web.sh)
     * Sets up JavaScript web development
-* [android.sh](https://github.com/donnemartin/dev-setup/blob/master/android.sh)
+* [android.sh](https://github.com/paul-phan/dev-setup/blob/master/android.sh)
     * Sets up Android development
 
 **Notes:**
@@ -212,12 +212,12 @@ Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`
 * `.dots` runs `brew.sh`, which takes awhile to complete as some formulae need to be installed from source.
 * **When `.dots` completes, be sure to restart your computer for all updates to take effect.**
 
-I encourage you to read through Section 1 so you have a better idea of what each installation script does.  The following discussions describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.
+I encourage you to read through Section 1 so you have a better idea of what each installation script does.  The following discussions describe in greater detail what is executed when running the [.dots](https://github.com/paul-phan/dev-setup/blob/master/.dots) script.
 
 ### bootstrap.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/commands.png">
   <br/>
 </p>
 
@@ -239,7 +239,7 @@ Alternatively, to update while avoiding the confirmation prompt:
 
 To sync dev-setup to your local home directory without Git, run the following:
 
-    $ cd ~; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE}
+    $ cd ~; curl -#L https://github.com/paul-phan/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE}
 
 To update later on, just run that command again.
 
@@ -278,12 +278,12 @@ gpip(){
 }
 ```
 
-You could also use `~/.extra` to override settings, functions, and aliases from the dev-setup repository, although it’s probably better to [fork the dev-setup repository](https://github.com/donnemartin/dev-setup/fork).
+You could also use `~/.extra` to override settings, functions, and aliases from the dev-setup repository, although it’s probably better to [fork the dev-setup repository](https://github.com/paul-phan/dev-setup/fork).
 
 ### osxprep.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/xcode.jpg">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/xcode.jpg">
   <br/>
 </p>
 
@@ -319,13 +319,13 @@ Once you reach the downloads page, search for "command line tools", and download
 ### brew.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew2.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/homebrew2.png">
   <br/>
 </p>
 
 When setting up a new Mac, you may want to install [Homebrew](http://brew.sh/), a package manager that simplifies installing and updating applications or libraries.
 
-Some of the apps installed by the `brew.sh` script include: Chrome, Firefox, Sublime Text, Atom, Dropbox, Evernote, Skype, Slack, Alfred, VirtualBox, Vagrant, Docker, etc.  **For a full listing of installed formulae and apps, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
+Some of the apps installed by the `brew.sh` script include: Chrome, Firefox, Sublime Text, Atom, Dropbox, Evernote, Skype, Slack, Alfred, VirtualBox, Vagrant, Docker, etc.  **For a full listing of installed formulae and apps, refer to the commented [brew.sh source file](https://github.com/paul-phan/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
 
 Run the `brew.sh` script:
 
@@ -338,13 +338,13 @@ The `brew.sh` script takes awhile to complete, as some formulae need to be insta
 ### osx.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/osx.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/osx.png">
   <br/>
 </p>
 
 When setting up a new Mac, you may want to set OS X defaults geared towards developers.  The `osx.sh` script also configures common third-party apps such Sublime Text and Chrome.
 
-**Note**: **I strongly encourage you read through the commented [osx.sh source file](https://github.com/donnemartin/dev-setup/blob/master/osx.sh) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to change some of the settings listed in the SSD section.
+**Note**: **I strongly encourage you read through the commented [osx.sh source file](https://github.com/paul-phan/dev-setup/blob/master/osx.sh) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to change some of the settings listed in the SSD section.
 
 Run the `osx.sh` script:
 
@@ -355,7 +355,7 @@ Run the `osx.sh` script:
 ### pydata.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/pydata.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/pydata.png">
   <br/>
 </p>
 
@@ -382,7 +382,7 @@ Then start working with the installed packages, for example:
 ### aws.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/aws.png">
   <br/>
 </p>
 
@@ -395,7 +395,7 @@ To set up a development environment to work with Spark, Hadoop MapReduce, and Am
 ### datastores.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/datastores.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/datastores.png">
   <br/>
 </p>
 
@@ -408,7 +408,7 @@ To set up common data stores, run the `datastores.sh` script:
 ### web.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/webdev.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/webdev.png">
   <br/>
 </p>
 
@@ -421,7 +421,7 @@ To set up a JavaScript web development environment, Run the `web.sh` script:
 ### android.sh script
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/android.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/android.png">
   <br/>
 </p>
 
@@ -436,7 +436,7 @@ To set up an Android development environment, run the `android.sh` script:
 ### Sublime Text
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/sublime.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/sublime.png">
   <br/>
 </p>
 
@@ -516,7 +516,7 @@ I set my comments color to `#E6DB74`.
 ### Atom
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/atom.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/atom.png">
   <br/>
 </p>
 
@@ -535,7 +535,7 @@ Atom has a great package manager that allows you to easily install both core and
 ### Terminal Customization
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/terminal.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/terminal.png">
   <br/>
 </p>
 
@@ -548,7 +548,7 @@ The [bootstrap.sh script](#bootstrapsh-script) and [osx.sh script](#osxsh-script
 ### iTerm2
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/iterm2.png">
   <br/>
 </p>
 
@@ -577,7 +577,7 @@ Now we have a terminal we can work with!
 ### Vim
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/vim.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/vim.png">
   <br/>
 </p>
 
@@ -594,7 +594,7 @@ The [bootstrap.sh script](#bootstrapsh-script) contains Vim customizations.
 ### VirtualBox
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/virtualbox.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/virtualbox.png">
   <br/>
 </p>
 
@@ -613,7 +613,7 @@ If you prefer to install it separately, you can download it [here](https://www.v
 ### Vagrant
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/vagrant.jpeg">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/vagrant.jpeg">
   <br/>
 </p>
 
@@ -632,7 +632,7 @@ If you prefer to install it separately, you can download it [here](https://www.v
 ### Docker
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/docker.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/docker.png">
   <br/>
 </p>
 
@@ -665,7 +665,7 @@ Set the `DOCKER_HOST` environment variable and fill in IP and PORT based on the 
 ### Git
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/git.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/git.png">
   <br/>
 </p>
 
@@ -683,10 +683,10 @@ To check your version of Git, run the following command:
 
 And `$ which git` should output `/usr/local/bin/git`.
 
-Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/donnemartin/dev-setup/master/.gitconfig) file to your home directory:
+Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/paul-phan/dev-setup/master/.gitconfig) file to your home directory:
 
     $ cd ~
-    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.gitconfig
+    $ curl -O https://raw.githubusercontent.com/paul-phan/dev-setup/master/.gitconfig
 
 It will add some color to the `status`, `branch`, and `diff` Git commands, as well as a couple aliases. Feel free to take a look at the contents of the file, and add to it to your liking.
 
@@ -701,12 +701,12 @@ To push code to your GitHub repositories, we're going to use the recommended HTT
 
     $ git config --global credential.helper osxkeychain
 
-**Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](https://github.com/donnemartin/dev-setup/blob/master/.gitignore) file for inspiration.  Also check out GitHub's [collection of .gitignore templates](https://github.com/github/gitignore).
+**Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](https://github.com/paul-phan/dev-setup/blob/master/.gitignore) file for inspiration.  Also check out GitHub's [collection of .gitignore templates](https://github.com/github/gitignore).
 
 ### Homebrew
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/homebrew.png">
   <br/>
 </p>
 
@@ -755,7 +755,7 @@ To see what you have installed (with their version numbers):
 ### Ruby and rbenv
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/ruby.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/ruby.png">
   <br/>
 </p>
 
@@ -803,7 +803,7 @@ $ rbenv global 2.0.0
 ### Python
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/python.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/python.png">
   <br/>
 </p>
 
@@ -910,7 +910,7 @@ Deactivate the currently active virtual environment. Note that workonwill automa
 ### Anaconda
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/anaconda.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/anaconda.png">
   <br/>
 </p>
 
@@ -925,7 +925,7 @@ Follow instructions to install [Anaconda](http://docs.continuum.io/anaconda/inst
 ### IPython Notebook
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/data-science-ipython-notebooks/master/images/README_1200x800.gif">
+  <img src="https://raw.githubusercontent.com/paul-phan/data-science-ipython-notebooks/master/images/README_1200x800.gif">
 </p>
 
 [IPython](http://ipython.org/) is an awesome project which provides a much better Python shell than the one you get from running `$ python` in the command-line. It has many cool functions (running Unix commands from the Python shell, easy copy & paste, creating Matplotlib charts in-line, etc.) and I'll let you refer to the [documentation](http://ipython.org/ipython-doc/stable/index.html) to discover them.
@@ -948,13 +948,13 @@ If you run into an issue about pyzmq, refer to the following [Stack Overflow pos
     $ ipython notebook
 
 If you'd like to see some examples here are a couple of my repos that use IPython Notebooks heavily:
-* [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks)
-* [interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges)
+* [data-science-ipython-notebooks](https://github.com/paul-phan/data-science-ipython-notebooks)
+* [interactive-coding-challenges](https://github.com/paul-phan/interactive-coding-challenges)
 
 ### NumPy
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/numpy.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/numpy.png">
   <br/>
 </p>
 
@@ -968,12 +968,12 @@ The [pydata.sh script](#pydatash-script) installs NumPy.  If you prefer to insta
 
 #### Usage
 
-Refer to the following [Numpy IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#numpy).
+Refer to the following [Numpy IPython Notebook](https://github.com/paul-phan/data-science-ipython-notebooks#numpy).
 
 ### Pandas
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/pandas.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/pandas.png">
   <br/>
 </p>
 
@@ -987,12 +987,12 @@ The [pydata.sh script](#pydatash-script) installs Pandas.  If you prefer to inst
 
 #### Usage
 
-Refer to the following [pandas IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#pandas).
+Refer to the following [pandas IPython Notebooks](https://github.com/paul-phan/data-science-ipython-notebooks#pandas).
 
 ### Matplotlib
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/matplotlib.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/matplotlib.png">
   <br/>
 </p>
 
@@ -1006,12 +1006,12 @@ The [pydata.sh script](#pydatash-script) installs matplotlib.  If you prefer to 
 
 #### Usage
 
-Refer to the following [matplotlib IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#matplotlib).
+Refer to the following [matplotlib IPython Notebooks](https://github.com/paul-phan/data-science-ipython-notebooks#matplotlib).
 
 ### Seaborn
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/seaborn.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/seaborn.png">
   <br/>
 </p>
 
@@ -1025,12 +1025,12 @@ The [pydata.sh script](#pydatash-script) installs matplotlib.  If you prefer to 
 
 #### Usage
 
-Refer to the following [matplotlib with Seaborn IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#matplotlib).
+Refer to the following [matplotlib with Seaborn IPython Notebooks](https://github.com/paul-phan/data-science-ipython-notebooks#matplotlib).
 
 ### Scikit-learn
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/scikitlearn.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/scikitlearn.png">
   <br/>
 </p>
 
@@ -1044,12 +1044,12 @@ The [pydata.sh script](#pydatash-script) installs Scikit-learn.  If you prefer t
 
 #### Usage
 
-Refer to the following [scikit-learn IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#scikit-learn).
+Refer to the following [scikit-learn IPython Notebooks](https://github.com/paul-phan/data-science-ipython-notebooks#scikit-learn).
 
 ### SciPy
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/scipy.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/scipy.png">
   <br/>
 </p>
 
@@ -1063,12 +1063,12 @@ The [pydata.sh script](#pydatash-script) installs SciPy.  If you prefer to insta
 
 #### Usage
 
-Refer to the following [SciPy IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#statistical-inference-scipy).
+Refer to the following [SciPy IPython Notebooks](https://github.com/paul-phan/data-science-ipython-notebooks#statistical-inference-scipy).
 
 ### Flask
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/flask.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/flask.png">
   <br/>
 </p>
 
@@ -1082,12 +1082,12 @@ The [pydata.sh script](#pydatash-script) installs SciPy.  If you prefer to insta
 
 #### Usage
 
-[Coming Soon] Refer to the following [Flask IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#).
+[Coming Soon] Refer to the following [Flask IPython Notebooks](https://github.com/paul-phan/data-science-ipython-notebooks#).
 
 ### Bokeh
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/bokeh.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/bokeh.png">
   <br/>
 </p>
 
@@ -1101,14 +1101,14 @@ The [pydata.sh script](#pydatash-script) installs Bokeh.  If you prefer to insta
 
 #### Usage
 
-[Coming Soon] Refer to the following [Bokeh IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#).
+[Coming Soon] Refer to the following [Bokeh IPython Notebooks](https://github.com/paul-phan/data-science-ipython-notebooks#).
 
 ## Section 4: Big Data, AWS, and Heroku
 
 ### Spark
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/spark.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/spark.png">
   <br/>
 </p>
 
@@ -1132,7 +1132,7 @@ Run Spark within IPython Notebook:
 
     $ ipython notebook --profile=pyspark
 
-Refer to the following [Spark IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#spark).
+Refer to the following [Spark IPython Notebook](https://github.com/paul-phan/data-science-ipython-notebooks#spark).
 
 Spark is also supported on AWS Elastic MapReduce as described [here](https://aws.amazon.com/blogs/aws/new-apache-spark-on-amazon-emr/).  To create a cluster, run the following command with the [AWS CLI](#aws-cli), replacing ```myKeyPair``` with the name of your keypair to SSH into your cluster:
 
@@ -1141,7 +1141,7 @@ Spark is also supported on AWS Elastic MapReduce as described [here](https://aws
 ### MapReduce
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mrjob.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/mrjob.png">
   <br/>
 </p>
 
@@ -1173,16 +1173,16 @@ runners:
 
 #### Usage
 
-Refer to the following [mrjob IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#mapreduce-python).
+Refer to the following [mrjob IPython Notebook](https://github.com/paul-phan/data-science-ipython-notebooks#mapreduce-python).
 
 ### Awesome AWS [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/data-science-ipython-notebooks/master/images/aws.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/data-science-ipython-notebooks/master/images/aws.png">
 </p>
 <br/>
 
-[Awesome AWS](https://github.com/donnemartin/awesome-aws) is a curated list of awesome AWS libraries, open source repos, guides, blogs, and other resources.  It's a great way to stay up-to-date with the various aws-backed and community-led efforts geared towards AWS.
+[Awesome AWS](https://github.com/paul-phan/awesome-aws) is a curated list of awesome AWS libraries, open source repos, guides, blogs, and other resources.  It's a great way to stay up-to-date with the various aws-backed and community-led efforts geared towards AWS.
 
 #### The Fiery Meter of AWSome
 
@@ -1194,7 +1194,7 @@ Refer to the following [mrjob IPython Notebook](https://github.com/donnemartin/d
 * Repo with 1000+ Stars: :fire::fire::fire::fire:
 * Repo with 2000+ Stars: :fire::fire::fire::fire::fire:
 
-*Repos not on `The Fiery Meter of AWSome` can still be awesome, see [A Note on Repo AWSomeness](https://github.com/donnemartin/awesome-aws/blob/master/CONTRIBUTING.md#a-note-on-repo-awsomeness).*
+*Repos not on `The Fiery Meter of AWSome` can still be awesome, see [A Note on Repo AWSomeness](https://github.com/paul-phan/awesome-aws/blob/master/CONTRIBUTING.md#a-note-on-repo-awsomeness).*
 
 ### AWS Account
 
@@ -1209,7 +1209,7 @@ To create an AWS account, open http://aws.amazon.com/, and then click Sign Up.  
 ### AWS CLI
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_cli.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/aws_cli.png">
   <br/>
 </p>
 
@@ -1242,7 +1242,7 @@ aws_secret_access_key = YOURSECRETKEY
 
 #### Usage
 
-Refer to the following [AWS CLI IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+Refer to the following [AWS CLI IPython Notebook](https://github.com/paul-phan/data-science-ipython-notebooks#aws).
 
 ### SAWS
 
@@ -1293,12 +1293,12 @@ Under the hood, `SAWS` is **powered by the AWS CLI** and supports the **same com
 
 #### Installation and Usage.
 
-Refer to the [repo link](https://github.com/donnemartin/saws).
+Refer to the [repo link](https://github.com/paul-phan/saws).
 
 ### Boto
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/boto.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/boto.png">
   <br/>
 </p>
 
@@ -1314,12 +1314,12 @@ Boto uses the same configuration as described in the [AWS CLI](#aws-cli) section
 
 #### Usage
 
-Refer to the following [Boto IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+Refer to the following [Boto IPython Notebook](https://github.com/paul-phan/data-science-ipython-notebooks#aws).
 
 ### S3cmd
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/s3cmd.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/s3cmd.png">
   <br/>
 </p>
 
@@ -1357,12 +1357,12 @@ gpg_passphrase = YOURPASSPHRASE
 
 #### Usage
 
-Refer to the following [s3cmd IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+Refer to the following [s3cmd IPython Notebook](https://github.com/paul-phan/data-science-ipython-notebooks#aws).
 
 ### S3DistCp
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/s3distcp.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/s3distcp.png">
   <br/>
 </p>
 
@@ -1374,12 +1374,12 @@ S3DistCp comes bundled with the AWS CLI.
 
 #### Usage
 
-Refer to the following [S3DistCp IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+Refer to the following [S3DistCp IPython Notebook](https://github.com/paul-phan/data-science-ipython-notebooks#aws).
 
 ### S3-parallel-put
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/s3-parallel-put.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/s3-parallel-put.png">
   <br/>
 </p>
 
@@ -1391,12 +1391,12 @@ Refer to the following [S3DistCp IPython Notebook](https://github.com/donnemarti
 
 #### Usage
 
-Refer to the following [s3-parallel-put IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+Refer to the following [s3-parallel-put IPython Notebook](https://github.com/paul-phan/data-science-ipython-notebooks#aws).
 
 ### Redshift
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_redshift.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/aws_redshift.png">
   <br/>
 </p>
 
@@ -1408,12 +1408,12 @@ Follow these [instructions](http://docs.aws.amazon.com/redshift/latest/gsg/rs-gs
 
 #### Usage
 
-Refer to the following [Redshift IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+Refer to the following [Redshift IPython Notebook](https://github.com/paul-phan/data-science-ipython-notebooks#aws).
 
 ### Kinesis
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_kinesis.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/aws_kinesis.png">
   <br/>
 </p>
 
@@ -1425,12 +1425,12 @@ Follow these [instructions](http://docs.aws.amazon.com/kinesis/latest/dev/before
 
 #### Usage
 
-Refer to the following [Kinesis IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+Refer to the following [Kinesis IPython Notebook](https://github.com/paul-phan/data-science-ipython-notebooks#aws).
 
 ### Lambda
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_lambda.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/aws_lambda.png">
   <br/>
 </p>
 
@@ -1442,12 +1442,12 @@ Follow these [instructions](http://docs.aws.amazon.com/lambda/latest/dg/setting-
 
 #### Usage
 
-Refer to the following [Lambda IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+Refer to the following [Lambda IPython Notebook](https://github.com/paul-phan/data-science-ipython-notebooks#aws).
 
 ### AWS Machine Learning
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_ml.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/aws_ml.png">
   <br/>
 </p>
 
@@ -1459,12 +1459,12 @@ Follow these [instructions](http://docs.aws.amazon.com/machine-learning/latest/d
 
 #### Usage
 
-[Coming Soon] Refer to the following [AWS Machine Learning IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+[Coming Soon] Refer to the following [AWS Machine Learning IPython Notebook](https://github.com/paul-phan/data-science-ipython-notebooks#aws).
 
 ### Heroku
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/heroku.jpg">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/heroku.jpg">
   <br/>
 </p>
 
@@ -1514,7 +1514,7 @@ The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resource
 ### MySQL
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mysql.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/mysql.png">
   <br/>
 </p>
 
@@ -1556,7 +1556,7 @@ To connect with the command-line client, run:
 ### MySQL Workbench
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mysql_workbench.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/mysql_workbench.png">
   <br/>
 </p>
 
@@ -1574,7 +1574,7 @@ You can also find the MySQL Workbench download [here](http://www.mysql.com/downl
 ### MongoDB
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mongodb.jpeg">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/mongodb.jpeg">
   <br/>
 </p>
 
@@ -1602,7 +1602,7 @@ I'll let you refer to MongoDB's [Getting Started](http://docs.mongodb.org/manual
 ### Redis
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/redis.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/redis.png">
   <br/>
 </p>
 
@@ -1634,7 +1634,7 @@ I'll let you refer to Redis' [documentation](http://redis.io/documentation) or o
 ### Elasticsearch
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/elasticsearch.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/elasticsearch.png">
   <br/>
 </p>
 
@@ -1685,7 +1685,7 @@ Elasticsearch's [documentation](http://www.elasticsearch.org/guide/) is more of 
 ### Node.js
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/nodejs.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/nodejs.png">
   <br/>
 </p>
 
@@ -1750,7 +1750,7 @@ To uninstall a package:
 ### JSHint
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/jshint.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/jshint.png">
   <br/>
 </p>
 
@@ -1769,7 +1769,7 @@ Follow additional instructions on the [JSHint Package Manager page](https://subl
 ### LESS
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/less.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/less.png">
   <br/>
 </p>
 
@@ -1812,7 +1812,7 @@ Read more about LESS on their page here: http://lesscss.org/
 ### Java
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/java.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/java.png">
   <br/>
 </p>
 
@@ -1829,7 +1829,7 @@ If you prefer to install it separately, you can download the JDK [here](http://w
 ### Android SDK
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/androidsdk.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/androidsdk.png">
   <br/>
 </p>
 
@@ -1840,7 +1840,7 @@ If you prefer to install it separately, you can download it [here](https://devel
 ### Android Studio
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/androidstudio.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/androidstudio.png">
   <br/>
 </p>
 
@@ -1855,7 +1855,7 @@ If you prefer to install it separately, you can download it [here](https://devel
 ### IntelliJ IDEA
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/intellij.png">
+  <img src="https://raw.githubusercontent.com/paul-phan/dev-setup-resources/master/res/intellij.png">
   <br/>
 </p>
 
@@ -1871,17 +1871,17 @@ If you prefer to install it separately, you can download it [here](https://www.j
 
 ### Contributions
 
-Bug reports, suggestions, and pull requests are [welcome](https://github.com/donnemartin/dev-setup/issues)!
+Bug reports, suggestions, and pull requests are [welcome](https://github.com/paul-phan/dev-setup/issues)!
 
 ### Credits
 
-See the [Credits Page](https://github.com/donnemartin/dev-setup/blob/master/CREDITS.md).
+See the [Credits Page](https://github.com/paul-phan/dev-setup/blob/master/CREDITS.md).
 
 ## Contact Info
 
 Feel free to contact me to discuss any issues, questions, or comments.
 
-My contact info can be found on my [GitHub page](https://github.com/donnemartin).
+My contact info can be found on my [GitHub page](https://github.com/paul-phan).
 
 ### License
 

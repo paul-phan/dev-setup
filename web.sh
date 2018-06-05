@@ -19,13 +19,13 @@ fi
 brew update
 
 brew install node
+brew install yarn
 
 # Remove outdated versions from the cellar.
 brew cleanup
 
-npm install -g coffee-script
-npm install -g grunt-cli
-npm install -g jshint
-npm install -g less
+npm install -g webpack
+npm install -g eslint
+npm install -g create-react-app
+npm install -g babel-cli
 
-#gem install jekyll
