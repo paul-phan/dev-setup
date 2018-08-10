@@ -24,8 +24,8 @@ brew install yarn
 # Remove outdated versions from the cellar.
 brew cleanup
 
-npm install -g webpack
-npm install -g eslint
-npm install -g create-react-app
-npm install -g babel-cli
+sudo npm install -g webpack
+sudo npm install -g eslint
+sudo npm install -g create-react-app
+sudo npm install -g babel-cli
 
