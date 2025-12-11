@@ -166,3 +166,9 @@
 [url "git://gist.github.com/"]
 
     insteadOf = "gist:"
+[user]
+	name = Paul
+	email = phanminh65@gmail.com
+	signingkey = 02D7840A0C609597
+[commit]
+	gpgsign = true

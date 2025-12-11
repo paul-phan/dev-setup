@@ -25,3 +25,9 @@ Thumbs.db
 
 # Repo scratch directory
 scratch/
+
+# Setup logs
+.setup-logs/
+
+# Brewfile lock
+Brewfile.lock.json
